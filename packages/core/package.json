@@ -1,0 +1,74 @@
+{
+  "name": "contexture",
+  "version": "0.12.6",
+  "description": "The Contexture (aka ContextTree) Core",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:ci": "jest --coverage --json --outputFile=test-results.json",
+    "test:watch": "chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm t'",
+    "danger": "duti",
+    "fmt": "prettier --ignore-path .gitignore  --write './**/*.js'",
+    "lint": "eslint --ignore-path .gitignore './**/*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:ci": "npm run lint -- -o lint-results.json -f json",
+    "duti:fix": "npm run fmt && npm run lint:fix; npm run fmt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartprocure/contexture.git"
+  },
+  "keywords": [
+    "search",
+    "data-context"
+  ],
+  "author": "Samuel Greene",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartprocure/contexture/issues"
+  },
+  "homepage": "https://github.com/smartprocure/contexture#readme",
+  "dependencies": {
+    "@elastic/datemath": "^5.0.3",
+    "date-fns": "^2.11.1",
+    "futil": "^1.66.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "chokidar-cli": "^1.2.0",
+    "danger": "^10.5.4",
+    "duti": "^0.15.2",
+    "eslint": "^4.7.2",
+    "eslint-config-smartprocure": "^1.0.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "mockdate": "^3.0.5",
+    "prettier": "^1.7.2"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  }
+}
