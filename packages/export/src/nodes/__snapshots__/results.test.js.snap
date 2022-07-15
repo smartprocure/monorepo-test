@@ -197,7 +197,7 @@ exports[`results  with contexts not wrapped in \`response\` retrieves records 1`
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -261,7 +261,7 @@ exports[`results  with contexts not wrapped in \`response\` retrieves records 1`
       },
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -326,7 +326,7 @@ exports[`results  with contexts not wrapped in \`response\` retrieves records 1`
       },
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -585,7 +585,7 @@ exports[`results  with contexts wrapped in \`response\` retrieves records 1`] = 
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -647,7 +647,7 @@ exports[`results  with contexts wrapped in \`response\` retrieves records 1`] = 
       },
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -710,7 +710,7 @@ exports[`results  with contexts wrapped in \`response\` retrieves records 1`] = 
       },
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {

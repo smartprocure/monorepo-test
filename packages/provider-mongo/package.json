@@ -43,7 +43,7 @@
     "duti": "^0.15.2",
     "eslint": "^4.12.1",
     "eslint-config-smartprocure": "^1.1.0",
-    "jest": "^26.6.3",
+    "jest": "27.2.4",
     "mingo": "^4.1.2",
     "mongodb": "^3.5.6",
     "mongodb-memory-server": "^6.5.2",

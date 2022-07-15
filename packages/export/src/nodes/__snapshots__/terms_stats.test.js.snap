@@ -87,7 +87,7 @@ exports[`terms_stats retrieves records 1`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
@@ -128,7 +128,7 @@ exports[`terms_stats retrieves records 1`] = `
       },
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Object {
         "children": Array [
           Object {
