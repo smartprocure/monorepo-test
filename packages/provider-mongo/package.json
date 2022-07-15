@@ -1,0 +1,94 @@
+{
+  "name": "contexture-mongo",
+  "version": "0.26.2",
+  "description": "Mongo Provider for Contexture",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "test:ci": "npm run test -- --coverage --json --outputFile=test-results.json",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint --ignore-path .gitignore './**/*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:ci": "npm run lint -- -o lint-results.json -f json",
+    "fmt": "prettier --ignore-path .gitignore --write './**/*.js'",
+    "danger": "duti",
+    "duti:fix": "npm run lint:fix; npm run fmt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartprocure/contexture-mongo.git"
+  },
+  "keywords": [
+    "contexture",
+    "mongo"
+  ],
+  "author": "Samuel Greene",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartprocure/contexture-mongo/issues"
+  },
+  "homepage": "https://github.com/smartprocure/contexture-mongo#readme",
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  },
+  "dependencies": {
+    "@elastic/datemath": "^2.3.0",
+    "bluebird": "^3.5.0",
+    "debug": "^4.3.1",
+    "futil": "^1.67.2",
+    "include-all": "^4.0.3",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.28"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "contexture": "^0.0.4",
+    "danger": "^10.5.4",
+    "duti": "^0.15.2",
+    "eslint": "^4.12.1",
+    "eslint-config-smartprocure": "^1.1.0",
+    "jest": "^26.6.3",
+    "mingo": "^4.1.2",
+    "mongodb": "^3.5.6",
+    "mongodb-memory-server": "^6.5.2",
+    "prettier": "^1.8.2"
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "unit",
+        "testMatch": [
+          "<rootDir>/test/**/*.js"
+        ],
+        "collectCoverageFrom": [
+          "<rootDir>/src/**/*.{js,jsx}",
+          "!**/node_modules/**"
+        ],
+        "collectCoverage": true,
+        "coverageThreshold": {
+          "global": {
+            "branches": 0,
+            "functions": 0,
+            "lines": 0,
+            "statements": 0
+          }
+        }
+      },
+      {
+        "displayName": "integration",
+        "testMatch": [
+          "<rootDir>/integration-test/example-types/**/*.js"
+        ],
+        "maxConcurrency": 1,
+        "maxWorkers": 1
+      }
+    ]
+  },
+  "peerDependencies": {
+    "mongodb": "^3.5.6"
+  }
+}
