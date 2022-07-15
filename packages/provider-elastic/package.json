@@ -1,0 +1,64 @@
+{
+  "name": "contexture-elasticsearch",
+  "version": "1.14.2",
+  "description": "ElasticSearch Provider for Contexture",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha --recursive",
+    "test:watch": "chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm t'",
+    "test:ci": "./node_modules/mocha/bin/_mocha --recursive --reporter json > test-results.json",
+    "lint": "eslint --ignore-path .gitignore './**/*.js'",
+    "lint:ci": "npm run lint -- -o lint-results.json -f json",
+    "lint:fix": "npm run lint -- --fix",
+    "fmt": "prettier --ignore-path .gitignore --write './**/*.js'",
+    "danger": "duti",
+    "duti:fix": "npm run lint:fix; npm run fmt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartprocure/contexture-elasticsearch.git"
+  },
+  "keywords": [
+    "contexture",
+    "elasticsearch"
+  ],
+  "author": "Samuel Greene",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartprocure/contexture-elasticsearch/issues"
+  },
+  "homepage": "https://github.com/smartprocure/contexture-elasticsearch#readme",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  },
+  "dependencies": {
+    "@elastic/datemath": "^2.3.0",
+    "debug": "^4.3.1",
+    "futil": "^1.69.0",
+    "js-combinatorics": "^0.5.3",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.28",
+    "unidecode": "^0.1.8"
+  },
+  "devDependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
+    "agentkeepalive": "^4.1.4",
+    "babel-eslint": "^8.0.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chokidar-cli": "^1.2.0",
+    "contexture": "^0.11.1",
+    "danger": "^10.5.4",
+    "duti": "^0.15.2",
+    "eslint": "^4.8.0",
+    "eslint-config-smartprocure": "^1.0.2",
+    "mocha": "^3.5.3",
+    "prettier": "^1.7.4",
+    "sinon": "^4.0.0",
+    "sinon-chai": "^2.14.0"
+  }
+}
