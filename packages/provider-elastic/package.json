@@ -1,7 +1,15 @@
 {
-  "name": "contexture-elasticsearch",
+  "name": "@contexture/provider-elastic",
   "version": "1.14.2",
   "description": "ElasticSearch Provider for Contexture",
+  "license": "MIT",
+  "author": "SmartProcure",
+  "repository": {
+    "url": "github:smartprocure/contexture",
+    "directory": "packages/provider-elastic"
+  },
+  "bugs": "https://github.com/smartprocure/contexture/issues",
+  "homepage": "https://github.com/smartprocure/contexture/packages/provider-elastic#readme",
   "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha --recursive",
@@ -13,25 +21,6 @@
     "fmt": "prettier --ignore-path .gitignore --write './**/*.js'",
     "danger": "duti",
     "duti:fix": "npm run lint:fix; npm run fmt"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smartprocure/contexture-elasticsearch.git"
-  },
-  "keywords": [
-    "contexture",
-    "elasticsearch"
-  ],
-  "author": "Samuel Greene",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smartprocure/contexture-elasticsearch/issues"
-  },
-  "homepage": "https://github.com/smartprocure/contexture-elasticsearch#readme",
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": false
   },
   "dependencies": {
     "@elastic/datemath": "^2.3.0",

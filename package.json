@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "author": "SmartProcure",
   "repository": "github:smartprocure/contexture",
   "bugs": "https://github.com/smartprocure/contexture/issues",
   "homepage": "https://github.com/smartprocure/contexture#readme",
-  "author": "SmartProcure",
+  "keywords": [
+    "search",
+    "data-context",
+    "elasticsearch",
+    "mongo"
+  ],
   "packageManager": "yarn@3.2.0",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  }
 }

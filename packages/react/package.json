@@ -1,7 +1,16 @@
 {
-  "name": "contexture-react",
+  "name": "@contexture/react",
   "version": "2.51.1",
   "description": "React components for building contexture interfaces",
+  "license": "MIT",
+  "author": "SmartProcure",
+  "repository": {
+    "url": "github:smartprocure/contexture",
+    "directory": "packages/react"
+  },
+  "bugs": "https://github.com/smartprocure/contexture/issues",
+  "homepage": "https://github.com/smartprocure/contexture/packages/react#readme",
+  "readme": "README.mdx",
   "main": "dist/index.js",
   "scripts": {
     "start": "npm run storybook",
@@ -21,44 +30,11 @@
     "duti:fix": "npm run lint:fix && npm run fmt",
     "update-pkg": "node updatePackage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smartprocure/contexture-react.git"
-  },
-  "author": {
-    "name": "Samuel Greene"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smartprocure/contexture-react/issues"
-  },
-  "homepage": "https://github.com/smartprocure/contexture-react#readme",
   "peerDependencies": {
     "mobx": "^4.3.1",
     "mobx-react": "^6.1.1",
     "mobx-utils": "^5.0.0",
     "react": "^16.8.0 || ^17.0.0"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "arrowParens": "avoid"
-  },
-  "storybook-deployer": {
-    "commitMessage": "Deploy Storybook [ci skip]"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(md)$": "<rootDir>/../__mocks__/fileMock.js",
-      "\\.(css|less|sass)$": "<rootDir>/../__mocks__/styleMock.js"
-    },
-    "testURL": "http://localhost/",
-    "rootDir": "src",
-    "collectCoverage": false,
-    "collectCoverageFrom": [
-      "<rootDir>"
-    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -133,5 +109,19 @@
     "react-recompose": "^0.31.2",
     "reactjs-popup": "^2.0.4"
   },
-  "readme": "README.mdx"
+  "storybook-deployer": {
+    "commitMessage": "Deploy Storybook [ci skip]"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(md)$": "<rootDir>/../__mocks__/fileMock.js",
+      "\\.(css|less|sass)$": "<rootDir>/../__mocks__/styleMock.js"
+    },
+    "testURL": "http://localhost/",
+    "rootDir": "src",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "<rootDir>"
+    ]
+  }
 }

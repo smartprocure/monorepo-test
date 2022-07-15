@@ -1,7 +1,15 @@
 {
-  "name": "contexture-mongo",
+  "name": "@contexture/provider-mongo",
   "version": "0.26.2",
   "description": "Mongo Provider for Contexture",
+  "license": "MIT",
+  "author": "SmartProcure",
+  "repository": {
+    "url": "github:smartprocure/contexture",
+    "directory": "packages/provider-mongo"
+  },
+  "bugs": "https://github.com/smartprocure/contexture/issues",
+  "homepage": "https://github.com/smartprocure/contexture/packages/provider-mongo#readme",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --selectProjects unit",
@@ -15,24 +23,8 @@
     "danger": "duti",
     "duti:fix": "npm run lint:fix; npm run fmt"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smartprocure/contexture-mongo.git"
-  },
-  "keywords": [
-    "contexture",
-    "mongo"
-  ],
-  "author": "Samuel Greene",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smartprocure/contexture-mongo/issues"
-  },
-  "homepage": "https://github.com/smartprocure/contexture-mongo#readme",
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5"
+  "peerDependencies": {
+    "mongodb": "^3.5.6"
   },
   "dependencies": {
     "@elastic/datemath": "^2.3.0",
@@ -87,8 +79,5 @@
         "maxWorkers": 1
       }
     ]
-  },
-  "peerDependencies": {
-    "mongodb": "^3.5.6"
   }
 }
