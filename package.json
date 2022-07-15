@@ -1,0 +1,14 @@
+{
+  "name": "contexture",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "repository": "github:smartprocure/contexture",
+  "bugs": "https://github.com/smartprocure/contexture/issues",
+  "homepage": "https://github.com/smartprocure/contexture#readme",
+  "author": "SmartProcure",
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "packages/*"
+  ]
+}
